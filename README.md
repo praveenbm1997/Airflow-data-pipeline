@@ -30,7 +30,7 @@ superstore_project/
 ├── Dockerfile
 ├── requirements.txt
 ├── astro.config
-└── README.md        
+└── README.md   
 
 # Setup Guide
 
