@@ -4,32 +4,33 @@
 # Project Structure
 
 superstore_project/
-│── dags/                 
-│   │── superstore_ingestion.py  
-│   │── superstore_transformation.py  
 │
-│── include/               
-│   │── Superstore.csv
-|   │── superstore.db     
+├── dags/
+│ ├── superstore_ingestion.py
+│ └── superstore_transformation.py
 │
-│── model/
-|   │── dim_customers.py
-|   │── dim_dates.py
-|   │── dim_location.py
-|   │── dim_productss.py
-|   │── sales_data.py
-|
-│── plugins/               
+├── include/
+│ ├── Superstore.csv
+│ └── superstore.db
 │
-│── tests/                 
-│   │── test_dag_integrity.py
+├── model/
+│ ├── dim_customers.py
+│ ├── dim_dates.py
+│ ├── dim_location.py
+│ ├── dim_products.py
+│ └── sales_data.py
 │
-│── .env                   
-│── airflow_settings.yaml  
-│── Dockerfile             
-│── requirements.txt       
-│── astro.config           
-│── README.md              
+├── plugins/
+│
+├── tests/
+│ └── test_dag_integrity.py
+│
+├── .env
+├── airflow_settings.yaml
+├── Dockerfile
+├── requirements.txt
+├── astro.config
+└── README.md        
 
 # Setup Guide
 
