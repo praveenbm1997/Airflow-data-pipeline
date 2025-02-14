@@ -49,9 +49,9 @@ Make  sure to get the docker installed locally and running it before using the b
 
 ### 4. Use commonds like
 
-- **astro dev start**   to start Airflow
-- **astro dev restart**  to restart Airflow  
-- **astro dev stop**  to stop
+- **astro dev start**:   to start Airflow
+- **astro dev restart**:  to restart Airflow  
+- **astro dev stop**:  to stop
 
 
 # Dataset overview
@@ -93,7 +93,8 @@ The data pipeline follows the ETL (Extract, Transform, Load) process:
 * Load: Storing structured data into a SQLite database (used same DB to store raw and transfromed data. Can use a different DB).
 * Data Warehouse: A star schema with fact and dimension tables for efficient querying.
 
-![Database Schema](./images/image.png)
+![image](https://github.com/user-attachments/assets/37db7b7d-edd7-4e71-bba6-75b8284b9462)
+
 
 
 Astronomer Cosmos setup and Overview 
