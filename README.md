@@ -13,11 +13,11 @@ superstore_project/
 |   │── superstore.db     
 │
 │── model/
-|   │──dim_customers.py
-|   │──dim_dates.py
-|   │──dim_location.py
-|   │──dim_productss.py
-|   │──sales_data.py
+|   │── dim_customers.py
+|   │── dim_dates.py
+|   │── dim_location.py
+|   │── dim_productss.py
+|   │── sales_data.py
 |
 │── plugins/               
 │
@@ -33,129 +33,67 @@ superstore_project/
 
 # Setup Guide
 
-1. Install Astro CLI 
+### 1. Install Astro CLI 
 Based on the OS install the Astro CLI below is the documention
 
 "https://www.astronomer.io/docs/astro/cli/overview"
 
-2. Initialize the Astro Project
+### 2. Initialize the Astro Project
 
-# astro dev init 
+- **astro dev init** 
 This commond will give the inital setup of Airflow by providing the necessary files and folder setup with example files
 
-3. Install all the dependencies required
+### 3. Install all the dependencies required
 
 Make  sure to get the docker installed locally and running it before using the below commonds
 
-4. Use commonds like
+### 4. Use commonds like
 
-astro dev start  # to start Airflow
-astro dev restart # to restart Airflow  
-astro dev stop # to stop
+- **astro dev start**   to start Airflow
+- **astro dev restart**  to restart Airflow  
+- **astro dev stop**  to stop
 
 
 # Dataset overview
 
-Metadata
-Row ID => Unique ID for each row.
-Order ID => Unique Order ID for each Customer.
-Order Date => Order Date of the product.
-Ship Date => Shipping Date of the Product.
-Ship Mode=> Shipping Mode specified by the Customer.
-Customer ID => Unique ID to identify each Customer.
-Customer Name => Name of the Customer.
-Segment => The segment where the Customer belongs.
-Country => Country of residence of the Customer.
-City => City of residence of of the Customer.
-State => State of residence of the Customer.
-Postal Code => Postal Code of every Customer.
-Region => Region where the Customer belong.
-Product ID => Unique ID of the Product.
-Category => Category of the product ordered.
-Sub-Category => Sub-Category of the product ordered.
-Product Name => Name of the Product
-Sales => Sales of the Product.
-Quantity => Quantity of the Product.
-Discount => Discount provided.
-Profit => Profit/Loss incurred.
+### Metadata
+- **Row ID**: Unique ID for each row.
+- **Order ID**: Unique Order ID for each Customer.
+- **Order Date**: Order Date of the product.
+- **Ship Date**: Shipping Date of the Product.
+- **Ship Mode**: Shipping Mode specified by the Customer.
+- **Customer ID**: Unique ID to identify each Customer.
+- **Customer Name**: Name of the Customer.
+- **Segment**: The segment where the Customer belongs.
+- **Country**: Country of residence of the Customer.
+- **City**: City of residence of the Customer.
+- **State**: State of residence of the Customer.
+- **Postal Code**: Postal Code of every Customer.
+- **Region**: Region where the Customer belongs.
+- **Product ID**: Unique ID of the Product.
+- **Category**: Category of the product ordered.
+- **Sub-Category**: Sub-Category of the product ordered.
+- **Product Name**: Name of the Product.
+- **Sales**: Sales of the Product.
+- **Quantity**: Quantity of the Product.
+- **Discount**: Discount provided.
+- **Profit**: Profit/Loss incurred.
 
 
 # Architecture
 
-[Data Source] → [Extract] → [Transform] → [Load] → [Data Warehouse] 
+## ETL Pipeline
+
+The data pipeline follows the ETL (Extract, Transform, Load) process:
+
+`[Data Source] → [Extract] → [Transform] → [Load] → [Data Warehouse]`
 
 * Extract: Reads raw data from sources (CSV files).
 * Transform: Data cleaning, removing duplicates, added calculated files and Standardize column names.
 * Load: Storing structured data into a SQLite database (used same DB to store raw and transfromed data. Can use a different DB).
 * Data Warehouse: A star schema with fact and dimension tables for efficient querying.
 
-<img src="D:\personal projects\airflow local\Airflow-data-pipeline\include\image.png" alt="Database Schema" width="500">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Database Schema](./images/image.png)
 
 
 Astronomer Cosmos setup and Overview 
