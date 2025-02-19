@@ -17,6 +17,7 @@ superstore_project/
 |   │── dim_dates.py
 |   │── dim_location.py
 |   │── dim_productss.py
+|   │── fact_sales.py
 |   │── sales_data.py
 |
 │── plugins/               
