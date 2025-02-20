@@ -5,7 +5,7 @@
 ```
 superstore_project/
 │── dags/                 
-│   │── superstore_ingestion.py  
+│   │── superstore_pipeline_sqlite.py  
 │   │── superstore_transformation.py  
 │
 │── include/               
